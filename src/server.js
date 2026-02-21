@@ -17,7 +17,9 @@ connectDB();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
 //api routes
 app.use('/movieRoutes', movireRoutes);
 app.use('/auth', authRoutes);
